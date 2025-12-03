@@ -66,13 +66,12 @@ static const char unknown_str[] = "n/a";
  */
 
 static const struct arg args[] = {
-    { cpu_perc,        "CPU %s%%  ",          NULL },
-    { ram_perc,        "RAM %s%%  ",          NULL },
-    { temp,            "TEMP %s°C  ",         "/sys/class/hwmon/hwmon1/temp1_input" },
-    { disk_perc,       "DISK %s%%  ",         "/" },
+    { cpu_perc,        "CPU %s%% ",          NULL },
+		{ temp,            "%s°C  ",             "/sys/class/hwmon/hwmon2/temp1_input" },
+    { ram_perc,        "RAM %s%%  ",         NULL },
+    { disk_perc,       "DISK %s%%  ",        "/" },
     { netspeed_rx,     "↓ %s  ",             "enp8s0" },
     { netspeed_tx,     "↑ %s  ",             "enp8s0" },
-    { vol_perc,        "VOL %s%%  ",          NULL },
-    { datetime,        "%s",                  "%d/%m %H:%M" },
+    { datetime,        "%s",                 "%d/%m %H:%M" },
 };
 
