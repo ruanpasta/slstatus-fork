@@ -70,6 +70,7 @@ static const struct arg args[] = {
     { netspeed_tx,     "↑ %s   ",             "enp8s0" },
 	  { cpu_perc,        "CPU %s%%  ",          NULL },
 		{ temp,            "%s°C   ",             "/sys/class/hwmon/hwmon2/temp1_input" },
+		{ run_command,     "%s°Cr   ", "d=$(dirname $(grep -l k10temp /sys/class/hwmon/*/name)); " "awk '{print $1/1000}' $d/temp1_input" },
     { ram_perc,        "RAM %s%%   ",         NULL },
     { disk_perc,       "DISK %s%%   ",        "/" },
     { datetime,        "%s",                  "%d/%m %H:%M" },
